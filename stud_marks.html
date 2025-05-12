@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Marks Table</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;     
+      padding: 40px;
+      background-image: url(bg1.jpg);
+      background-size: cover;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1976d2;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #ffffff;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background-color: #1976d2;
+      color: white;
+      font-weight: 500;
+    }
+
+    tr:hover {
+      background-color: #e3f2fd;
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+      }
+
+      th, td {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.2em;
+      }
+
+      th, td {
+        font-size: 12px;
+        padding: 8px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <h2>Student Marks Table</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Math</th>
+        <th>Science</th>
+        <th>English</th>
+        <th>Computer</th>
+        <th>Total</th>
+        <th>Percentage</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>101</td>
+        <td>Aryan Gupta</td>
+        <td>95</td>
+        <td>90</td>
+        <td>88</td>
+        <td>94</td>
+        <td>367</td>
+        <td>91.75%</td>
+        <td>A+</td>
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>Riya Sharma</td>
+        <td>78</td>
+        <td>85</td>
+        <td>82</td>
+        <td>80</td>
+        <td>325</td>
+        <td>81.25%</td>
+        <td>B+</td>
+      </tr>
+      <tr>
+        <td>103</td>
+        <td>Soham Patel</td>
+        <td>68</td>
+        <td>72</td>
+        <td>75</td>
+        <td>70</td>
+        <td>285</td>
+        <td>71.25%</td>
+        <td>B</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

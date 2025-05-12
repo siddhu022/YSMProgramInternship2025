@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: whitesmoke;
+            color: black;
+            justify-content: center;
+            padding: 40px;
+            background-image: url(bg4.jpg);
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: whitesmoke;
+            padding: 50px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: whitesmoke;
+            margin-left: 30%;
+        }
+
+        form h2 {
+            margin-bottom: 10px;
+            text-align: center;
+            color: #1a73e8;
+            font-size: 2em;
+        }
+
+        form p {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .container-registration {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            font-size: 10px;
+            transition: border-color 0.3s ease;
+        }
+
+        .gender-selection {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        select {
+            background-color: whitesmoke;
+        }
+
+        .registerbtn {
+            width: 100%;
+            padding: 12px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .registerbtn:hover {
+            background-color: rgb(38, 133, 192);
+        }
+
+
+        /* responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 30px 20px;
+                margin: 0;
+                max-width: 100%;
+                box-shadow: none;
+            }
+
+            form h2 {
+                font-size: 1.6em;
+            }
+
+            form p {
+                font-size: 13px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            select {
+                font-size: 13px;
+                padding: 8px;
+            }
+
+            .gender-selection {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .registerbtn {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            form h2 {
+                font-size: 1.4em;
+            }
+
+            .registerbtn {
+                font-size: 13px;
+                padding: 10px;
+            }
+        }
+  </style>
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form action="/" method="post">
+        <h2>Registration</h2>
+        <p>Please fill in this form to create an account.</p>
+
+        <div class="container-registration">
+            <label for="uname">Username</label>
+            <input type="text" id="uname" name="uname" placeholder="Enter your username" required>
+        </div>
+
+        <div class="container-registration">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="container-registration">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="container-registration">
+            <label for="conf_password">Confirm Password</label>
+            <input type="password" id="conf_password" name="conf_password" placeholder="Confirm your password" required>
+        </div>
+
+        <div class="container-registration">
+            <p><strong>Gender</strong></p>
+            <div class="gender-selection">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+        </div>
+
+        <div class="container-registration">
+            <label for="country">Country</label>
+            <select name="country" id="country" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Australia">Australia</option>
+                <option value="New Zealand">New Zealand</option>
+            </select>
+        </div>
+
+        <p>By creating an account, you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+        <button type="submit" class="registerbtn">Register</button>
+
+        <!-- <div class="container-signin">
+            <p>Already have an account? <a href="user_log.html">Login here</a>.</p>
+        </div> -->
+    </form>
+</div>
+
+</body>
+</html>
