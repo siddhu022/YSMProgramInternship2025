@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - clinic management system</title>
+</head>
+<body>
+    {% extends 'layout.html' %}
+    {% block content %}
+    <div class="row">
+        <div class="col-md-4">
+            <div class="stat-card">
+                <h5>Total Patients</h5>
+                <p class="display-6">{{ total_patients }}</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="stat-card">
+                <h5>Doctor-Patient Allocation</h5>
+                <ul>
+                    {% for doctor in doctors %}
+                    <li><strong>{{ doctor.name }}</strong> ({{ doctor.specialization }}) — {{ doctor.patients|length }} patients</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
